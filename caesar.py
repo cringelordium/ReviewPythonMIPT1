@@ -32,10 +32,11 @@ def caesar_encrypt(source_file_way, result_file_way, shift):
     source_file_way - файл с исходным текстом
     result_file_way - файл куда будет сохранен результат 
     shift - сдвиг
-    return - ничего не возвращает, но записывает зашифрованный текст в result_file
     """
     result = ""
-    source_file = open(source_file_way, "r") #читаем
+
+    # читаем
+    source_file = open(source_file_way, "r")
 
     # encrypting file
     for line in source_file.readlines():
@@ -43,7 +44,7 @@ def caesar_encrypt(source_file_way, result_file_way, shift):
     source_file.close()
 
     # writing result
-    result_file = open(result_file_way, "w") #пишем
+    result_file = open(result_file_way, "w")
     result_file.write(result)
     result_file.close()
 
@@ -57,3 +58,55 @@ def caesar_encrypt_interface():
     result_file_way = input("Enter the name of the file you want to save the result to: ")
     shift = int(input("Enter shift from 1 to 25: "))
     caesar_encrypt(source_file_way, result_file_way, shift)
+
+
+def decrypt_caesar_line(line, shift):
+    """
+    расшифровка строки шифром цезаря
+    return - расшифрованная строка
+    """
+
+    result = ""
+    for let in line:
+        find_res = alphabet_lower.find(let)
+        if find_res != -1:
+            find_res -= shift
+            find_res %= len(alphabet_upper)
+            result += alphabet_lower[find_res]
+        else:
+            find_res = alphabet_upper.find(let)
+            if find_res != -1:
+                find_res -= shift
+                find_res %= len(alphabet_upper)
+                result += alphabet_upper[find_res]
+            else:
+                result += let
+    return result
+
+
+def caesar_decrypt(source_file_way, result_file_way, shift):
+
+    #дешифрование
+    result = ""
+    source_file = open(source_file_way, "r")
+
+    # encrypting file
+    for line in source_file.readlines():
+        result += decrypt_caesar_line(line, shift)
+    source_file.close()
+
+    # writing result
+    result_file = open(result_file_way, "w")
+    result_file.write(result)
+
+
+def caesar_decrypt_interface():
+    """
+    Интерфейс (caesar_decrypt)
+    return - ничего не возвращает
+    """
+    source_file_way = input("Enter the name of the file you want to encrypt: ")
+    result_file_way = input("Enter the name of the file you want to save the result to: ")
+    shift = int(input("Enter shift from 1 to 25: "))
+    caesar_decrypt(source_file_way, result_file_way, shift)
+
