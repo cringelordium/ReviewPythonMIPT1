@@ -7,7 +7,7 @@
 <h3 id="-python-"><strong>Установите Python и нужные библиотеки для корректной работы</strong></h3>
 <h5 id="-python3-project-">(Если у вас уже установлен Python 3 — пропустите этот этап)</h5>
 <p><strong>1. Скачайте дистрибутив Python 3 с официального <a href="https://www.python.org/downloads/">сайта</a> и установите его.</strong> 
-<p><strong>2. Во время установки <em>обязательно</em> поставьте галочку "Add Python 3.x to PATH".</strong></p> 
+<p><strong>2.  Однако, до начала процесса установки <em>обязательно</em> поставьте галочку "Add Python 3.x to PATH".</strong></p> 
 <p><strong>3. Запустите консоль GIT BUSH в папке с проектом</strong></p>
 <p><strong>4. Установите нужные библиотеки используя команды:</strong></p>
 <blockquote>
