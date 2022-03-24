@@ -20,3 +20,5 @@
 <p>python main.py</p>
 </blockquote>
 <p><strong>7. Воспользуйтесь интуитивно понятным интерфейсом.</strong></p>
+<p><strong>ТУТ ПОКА НИЧЕГО НЕТ))))))</strong></p>
+
