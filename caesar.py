@@ -110,3 +110,41 @@ def caesar_decrypt_interface():
     shift = int(input("Enter shift from 1 to 25: "))
     caesar_decrypt(source_file_way, result_file_way, shift)
 
+
+def caesar_hack(source_file_way, result_file_way):
+    """
+    Расшифровки шифра цезаря методом частотного анализа
+    source_file_way - исходный файл с зашифрованным текстом
+    result_file_way - файл куда будет сохранен декрипт
+    """
+    source_file = open(source_file_way, "r")
+
+    # Подсчет количества букв
+    counter = {}
+    letters = 0
+    for let in alphabet_lower:
+        counter[let] = 0
+    for line in source_file.readlines():
+        for let in line.lower():
+            if let in counter.keys():
+                counter[let] += 1
+                letters += 1
+
+    # Находим самую часто входящую букву и считаем что в исходном тексте это была буква "e"
+    counter = (list(counter.items()))
+    counter.sort(key=lambda i: i[1], reverse=True)
+    counter = list(map(lambda x: [x[0], x[1] / letters], counter))
+    shift = alphabet_lower.find(counter[0][0]) - alphabet_lower.find("e")
+    if shift < 0:
+        shift = len(alphabet_upper) + shift
+
+    caesar_decrypt(source_file_way, result_file_way, shift)
+
+
+def caesar_hack_interface():
+    """
+    Интерфейс (caesar_hack)
+    """
+    source_file_way = input("Enter name of file you want decrypt: ")
+    result_file_way = input("Enter name of file you want to save result to: ")
+    caesar_hack(source_file_way, result_file_way)

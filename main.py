@@ -1,4 +1,4 @@
-from caesar import caesar_encrypt_interface, caesar_decrypt_interface
+from caesar import caesar_encrypt_interface, caesar_decrypt_interface, caesar_hack_interface
 
 
 def hello():
@@ -13,13 +13,14 @@ def print_interface(menu_options):
     print("Start the Encryption:")
     for key in menu_options:
         print(key, ": ", menu_options[key]["text"], sep="")
-    print()
+    print('-----------------------------------------------')
 
 
 if __name__ == "__main__":
     menu_options = {"q": {"function": quit_program, "text": "QUIT"},
                     "1": {"function": caesar_encrypt_interface, "text": "Caesar encryption"},
-                    "2": {"function": caesar_decrypt_interface, "text": "Caesar decryption"}}
+                    "2": {"function": caesar_decrypt_interface, "text": "Caesar decryption"},
+                    "3": {"function": caesar_hack_interface, "text": "Caesar Hack"}}
     hello()
     keepWorking = True
     while keepWorking:
