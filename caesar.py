@@ -48,12 +48,12 @@ def caesar_encrypt(source_file_way, result_file_way, shift):
     result_file.close()
 
 
-def caesar_encrypt_int():
+def caesar_encrypt_interface():
     """
     Интерфейс (работает caesar_encrypt)
     return - ничего не возвращает
     """
-    source_file_way = input("Enter the name of the file you want to encrypt")
+    source_file_way = input("Enter the name of the file you want to encrypt: ")
     result_file_way = input("Enter the name of the file you want to save the result to: ")
     shift = int(input("Enter shift from 1 to 25: "))
     caesar_encrypt(source_file_way, result_file_way, shift)

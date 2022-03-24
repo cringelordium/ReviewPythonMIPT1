@@ -1,4 +1,4 @@
-from caesar import caesar_encrypt_int
+from caesar import caesar_encrypt_interface
 
 def hello():
     print("ENCRYPTOR v0.1 BY CRINGELORD (Aitimov Akezhan)")
@@ -16,7 +16,7 @@ def print_menu(menu_options):
 
 if __name__ == "__main__":
     menu_options = {"q": {"function": quit_program, "text": "QUIT"},
-                    "1": {"function": caesar_encrypt_int, "text": "Caesar encrypt"}}
+                    "1": {"function": caesar_encrypt_interface, "text": "Caesar encrypt"}}
     hello()
     keepWorking = True
     while keepWorking:
