@@ -1,5 +1,6 @@
 
-<h1 id="-2999">Encpytor by cringelord</h1>
+<h1 id="10">Encpytor by cringelord </h1>
+<h1 id="-">Айтимов Акежан, Б05-053.</h1>
 <blockquote>
 <p>v1.1</p>
 </blockquote>
