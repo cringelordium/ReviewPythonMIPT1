@@ -1,8 +1,7 @@
 
-<h1 id="10">Encrpytor by cringelord </h1>
-<h1 id="-">Айтимов Акежан, Б05-053.</h1>
+<h1 id="10">Encrpytor v1.0 by cringelord </h1>
 <blockquote>
-<p>v1.1</p>
+<p>Айтимов Акежан, Б05-053.</p>
 </blockquote>
 <h1 id="-">Туториал по запуску программы.</h1>
 <h3 id="-python-"><strong>Установите Python и нужные библиотеки для корректной работы</strong></h3>
@@ -16,10 +15,12 @@
 <p>pip intsall numpy</p>
 </blockquote>
 <p><strong>5. Скачайте проект с репозитория.</strong>
-<p><strong>6. Запустите программу при помощи команды:</strong></p>
+<p><strong>6. Запустите программу через консоль при помощи команды:</strong></p>
 <blockquote>
 <p>python main.py</p>
 </blockquote>
-<p><strong>7. Воспользуйтесь интуитивно понятным интерфейсом.</strong></p>
-<p><strong>Выберите нужный шифровальщик/дешифровальшик используя числа от 1 до n</strong></p>
+<p><strong>7. Воспользуйтесь интуитивно понятным интерфейсом:</strong></p>
+<p><strong>Введите в консоли число от 1 до 5 для выбора необходимой функции программы.</strong></p>
+<p><strong>Введите в консоли "q" что бы из программы.</strong></p>
+<p><img src="https://sun9-78.userapi.com/impf/oiLtTGRFbajTcrjlOLr2pelIoFjnCfCaejfTHA/VP4McazWyHc.jpg?size=567x223&quality=95&sign=d73c8bc41b628ef8ad36147808ba0f14&type=album" alt="add path screenshot"></p>
 

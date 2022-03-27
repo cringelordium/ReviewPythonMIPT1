@@ -1,4 +1,5 @@
 from global_var import alphabet_upper
+from itertools import cycle
 
 
 def vigenere_encrypt(source_file_way, result_file_way, key_word):
@@ -21,17 +22,17 @@ def vigenere_encrypt(source_file_way, result_file_way, key_word):
                 new_text += i
 
     # подготовка ключевого слова
-    tmpV = ""
+    tmp = ""
     for i in key_word.upper():
         if i in alphabet_upper:
-            tmpV += i
-    key_word = tmpV
+            tmp += i
+    key_word = tmp
 
-    # Непосредственно шифрование
-    for i in range(len(new_text)):
-        result += alphabet_upper[alphabet_upper.find(new_text[i]) + alphabet_upper.find(key_word[i % len(key_word)])]
+    #основной шифратор
+    encryptor = lambda arg: alphabet_upper[(alphabet_upper.index(arg[0]) + alphabet_upper.index(arg[1]) % 26) % 26]
+    result += ''.join(map(encryptor, zip(new_text, cycle(key_word))))
 
-    # writing result
+    # пишем результат
     result_file = open(result_file_way, "w")
     result_file.write(result)
     source_file.close()
@@ -69,13 +70,13 @@ def vigenere_decrypt(source_file_way, result_file_way, key_word):
                 new_text += i
 
     # подготовка ключевого слова
-    tmpV = ""
+    tmp = ""
     for i in key_word.upper():
         if i in alphabet_upper:
-            tmpV += i
-    key_word = tmpV
+            tmp += i
+    key_word = tmp
 
-    # Шифрование
+    # дешифрование
     for i in range(len(new_text)):
         result += alphabet_upper[alphabet_upper.find(new_text[i]) - alphabet_upper.find(key_word[i % len(key_word)])]
 
