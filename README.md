@@ -1,5 +1,5 @@
 
-<h1 id="10">Encrpytor v1.0 by cringelord </h1>
+<h1 id="10">Encryptor v1.0 by cringelord </h1>
 <blockquote>
 <p>Айтимов Акежан, Б05-053.</p>
 </blockquote>
