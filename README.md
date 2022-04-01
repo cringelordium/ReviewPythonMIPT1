@@ -9,17 +9,12 @@
 <p><strong>1. Скачайте дистрибутив Python 3 с официального <a href="https://www.python.org/downloads/">сайта</a> и установите его.</strong> 
 <p><strong>2.  Однако, до начала процесса установки <em>обязательно</em> поставьте галочку "Add Python 3.x to PATH".</strong></p> 
 <p><strong>3. Запустите консоль GIT BUSH в папке с проектом</strong></p>
-<p><strong>4. Установите нужные библиотеки используя команды:</strong></p>
-<blockquote>
-<p>pip install Pillow</p>
-<p>pip intsall numpy</p>
-</blockquote>
-<p><strong>5. Скачайте проект с репозитория.</strong>
-<p><strong>6. Запустите программу через консоль при помощи команды:</strong></p>
+<p><strong>4. Скачайте проект с репозитория.</strong>
+<p><strong>5. Запустите программу через консоль при помощи команды:</strong></p>
 <blockquote>
 <p>python main.py</p>
 </blockquote>
-<p><strong>7. Воспользуйтесь интуитивно понятным интерфейсом:</strong></p>
+<p><strong>6. Воспользуйтесь интуитивно понятным интерфейсом:</strong></p>
 <p><strong>Введите в консоли число от 1 до 5 для выбора необходимой функции программы.</strong></p>
 <p><strong>Введите в консоли "q" что бы из программы.</strong></p>
 <p><img src="https://sun9-78.userapi.com/impf/oiLtTGRFbajTcrjlOLr2pelIoFjnCfCaejfTHA/VP4McazWyHc.jpg?size=567x223&quality=95&sign=d73c8bc41b628ef8ad36147808ba0f14&type=album" alt="add path screenshot"></p>
