@@ -12,14 +12,14 @@ def vigenere_encrypt(source_file_way, result_file_way, key_word):
     ретерн ничего не возвращает, но запысывает зашифрованный текст в result_file
     """
     result = ""
-    source_file = open(source_file_way, "r")
+    with open(source_file_way, "r") as source_file:
 
-    new_text = ""
-    # подготовка файла
-    for line in source_file.readlines():
-        for i in line.upper():
-            if i in alphabet_upper:
-                new_text += i
+        new_text = ""
+        # подготовка файла
+        for line in source_file.readlines():
+            for i in line.upper():
+                if i in alphabet_upper:
+                    new_text += i
 
     # подготовка ключевого слова
     tmp = ""
@@ -33,10 +33,8 @@ def vigenere_encrypt(source_file_way, result_file_way, key_word):
     result += ''.join(map(encryptor, zip(new_text, cycle(key_word))))
 
     # пишем результат
-    result_file = open(result_file_way, "w")
-    result_file.write(result)
-    source_file.close()
-    result_file.close()
+    with open(result_file_way, "w") as result_file:
+        result_file.write(result)
 
 
 def vigenere_encrypt_interface():
@@ -60,14 +58,15 @@ def vigenere_decrypt(source_file_way, result_file_way, key_word):
     return - ничего не возвращает, но запысывает расшифрованный текст в result_file
     """
     result = ""
-    source_file = open(source_file_way, "r")
 
-    new_text = ""
-    # подготовка файла
-    for line in source_file.readlines():
-        for i in line.upper():
-            if i in alphabet_upper:
-                new_text += i
+    with open(source_file_way, "r") as source_file:
+
+        new_text = ""
+        # подготовка файла
+        for line in source_file.readlines():
+            for i in line.upper():
+                if i in alphabet_upper:
+                    new_text += i
 
     # подготовка ключевого слова
     tmp = ""
@@ -81,10 +80,8 @@ def vigenere_decrypt(source_file_way, result_file_way, key_word):
         result += alphabet_upper[alphabet_upper.find(new_text[i]) - alphabet_upper.find(key_word[i % len(key_word)])]
 
     # пишем результат
-    result_file = open(result_file_way, "w")
-    result_file.write(result)
-    source_file.close()
-    result_file.close()
+    with open(result_file_way, "w") as result_file:
+        result_file.write(result)
 
 
 def vigenere_decrypt_interface():

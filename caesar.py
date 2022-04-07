@@ -30,17 +30,14 @@ def caesar_encrypt(source_file_way, result_file_way, shift):
     result = ""
 
     # читаем
-    source_file = open(source_file_way, "r")
-
-    # encrypting file
-    for line in source_file.readlines():
-        result += encrypt_caesar_line(line, shift)
-    source_file.close()
+    with open(source_file_way, "r") as source_file:
+        # encrypting file
+        for line in source_file.readlines():
+            result += encrypt_caesar_line(line, shift)
 
     # writing result
-    result_file = open(result_file_way, "w")
-    result_file.write(result)
-    result_file.close()
+    with open(result_file_way, "w") as result_file:
+        result_file.write(result)
 
 
 def caesar_encrypt_interface():
@@ -72,19 +69,17 @@ def decrypt_caesar_line(line, shift):
 
 
 def caesar_decrypt(source_file_way, result_file_way, shift):
-
-    #дешифрование
     result = ""
-    source_file = open(source_file_way, "r")
 
-    # encrypting file
-    for line in source_file.readlines():
-        result += decrypt_caesar_line(line, shift)
-    source_file.close()
+    # читаем
+    with open(source_file_way, "r") as source_file:
+        # decrypting file
+        for line in source_file.readlines():
+            result += encrypt_caesar_line(line, shift)
 
     # writing result
-    result_file = open(result_file_way, "w")
-    result_file.write(result)
+    with open(result_file_way, "w") as result_file:
+        result_file.write(result)
 
 
 def caesar_decrypt_interface():
