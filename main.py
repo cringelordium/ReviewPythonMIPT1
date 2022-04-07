@@ -1,6 +1,6 @@
 from caesar import caesar_encrypt_interface, caesar_decrypt_interface, caesar_hack_interface
 from vigenere import vigenere_encrypt_interface, vigenere_decrypt_interface
-
+from vernam import vernam_encrypt_interface, vernam_decrypt_interface
 
 def hello():
     print("ENCRYPTOR v1.0 BY CRINGELORD (Aitimov Akezhan)")
@@ -25,7 +25,9 @@ if __name__ == "__main__":
                     "2": {"function": caesar_decrypt_interface, "text": "Caesar decryption"},
                     "3": {"function": caesar_hack_interface, "text": "Caesar Hack"},
                     "4": {"function": vigenere_encrypt_interface, "text": "Vigenere encryption"},
-                    "5": {"function": vigenere_decrypt_interface, "text": "Vigenere decryption"}}
+                    "5": {"function": vigenere_decrypt_interface, "text": "Vigenere decryption"},
+                    "6": {"function": vernam_encrypt_interface, "text": "Vernam encryption"},
+                    "7": {"function": vernam_decrypt_interface, "text": "Vernam decryption"}}
     hello()
     keepWorking = True
     while keepWorking:
