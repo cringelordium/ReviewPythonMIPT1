@@ -9,22 +9,16 @@ def encrypt_caesar_line(line, shift):
     shift - сдвиг 
     """
     result = ""
+    line = line.lower()
+
     for let in line:
-        encrypt = alphabet_lower.find(let)
-        if encrypt != -1:
-            encrypt += shift
-            encrypt %= len(alphabet_upper)
-            result += alphabet_lower[encrypt]
+        pos = alphabet_lower.find(let)
+        if pos != -1:
+            result += alphabet_lower[(pos + shift) % len(alphabet_lower)]
         else:
-            encrypt = alphabet_upper.find(let)
-            if encrypt != -1:
-                encrypt += shift
-                encrypt %= len(alphabet_upper)
-                result += alphabet_upper[encrypt]
-            else:
-                result += let
+            result += let
     return result
-  
+
 
 def caesar_encrypt(source_file_way, result_file_way, shift):
     """
@@ -65,22 +59,15 @@ def decrypt_caesar_line(line, shift):
     расшифровка строки шифром цезаря
     return - расшифрованная строка
     """
-
     result = ""
+    line = line.lower()
+
     for let in line:
-        find_res = alphabet_lower.find(let)
-        if find_res != -1:
-            find_res -= shift
-            find_res %= len(alphabet_upper)
-            result += alphabet_lower[find_res]
+        pos = alphabet_lower.find(let)
+        if pos != -1:
+            result += alphabet_lower[(pos - shift) % len(alphabet_lower)]
         else:
-            find_res = alphabet_upper.find(let)
-            if find_res != -1:
-                find_res -= shift
-                find_res %= len(alphabet_upper)
-                result += alphabet_upper[find_res]
-            else:
-                result += let
+            result += let
     return result
 
 
